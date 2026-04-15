@@ -1,0 +1,1579 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>Pilates mee 店舗別バナーワイヤー 2026-04</title>
+<style>
+  :root {
+    --beige: #F5E8DC;
+    --pink: #D4A5A5;
+    --yellow: #F4D03F;
+    --text: #3a2e28;
+    --sub: #6b5a50;
+    --line: #c9b6a7;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 40px 20px 80px;
+    font-family: "Hiragino Mincho ProN", "游明朝", serif;
+    background: #eee;
+    color: #222;
+  }
+  h1 {
+    text-align: center;
+    font-size: 28px;
+    margin: 0 0 8px;
+  }
+  .subtitle {
+    text-align: center;
+    font-family: "Hiragino Sans", sans-serif;
+    color: #666;
+    font-size: 13px;
+    margin-bottom: 40px;
+  }
+  .store {
+    max-width: 1100px;
+    margin: 0 auto 60px;
+    background: #fff;
+    border-radius: 12px;
+    padding: 28px 32px 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  }
+  .store h2 {
+    font-family: "Hiragino Sans", sans-serif;
+    font-size: 20px;
+    margin: 0 0 4px;
+    color: #222;
+  }
+  .store .meta {
+    font-family: "Hiragino Sans", sans-serif;
+    font-size: 12px;
+    color: #888;
+    margin-bottom: 20px;
+  }
+  .store .special {
+    display: inline-block;
+    font-family: "Hiragino Sans", sans-serif;
+    font-size: 11px;
+    background: #fff4d4;
+    color: #8a6d1b;
+    padding: 3px 10px;
+    border-radius: 12px;
+    margin-left: 8px;
+  }
+  .banners {
+    display: flex;
+    gap: 32px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+  .banner-wrap { text-align: center; }
+  .banner-label {
+    font-family: "Hiragino Sans", sans-serif;
+    font-size: 11px;
+    color: #666;
+    margin-bottom: 6px;
+  }
+
+  /* 正方形バナー */
+  .square {
+    width: 400px;
+    height: 400px;
+    background: var(--beige);
+    padding: 28px 24px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    border: 1px solid #e0d5c8;
+  }
+  .square .area {
+    font-family: "Hiragino Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text);
+    background: #fff;
+    padding: 8px 14px;
+    border-radius: 4px;
+    display: inline-block;
+    align-self: flex-start;
+    margin-bottom: 14px;
+  }
+  .square .divider {
+    height: 1px;
+    background: var(--line);
+    margin-bottom: 16px;
+  }
+  .square .main {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.3;
+    color: var(--text);
+    letter-spacing: 0.02em;
+    margin-bottom: 12px;
+    text-align: center;
+  }
+  .square .sub {
+    font-family: "Hiragino Sans", sans-serif;
+    font-size: 13px;
+    color: var(--sub);
+    text-align: center;
+    margin-bottom: 16px;
+    line-height: 1.5;
+  }
+  .square .offer {
+    background: var(--yellow);
+    padding: 12px;
+    border-radius: 4px;
+    text-align: center;
+    margin-bottom: 14px;
+    font-family: "Hiragino Sans", sans-serif;
+  }
+  .square .offer .row {
+    font-size: 15px;
+    font-weight: 700;
+    color: #3a2e28;
+    line-height: 1.6;
+  }
+  .square .offer .row span {
+    font-size: 20px;
+    color: #b14e4e;
+  }
+  .square .brand {
+    margin-top: auto;
+    text-align: center;
+    font-family: "Hiragino Sans", sans-serif;
+  }
+  .square .logo {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--pink);
+    letter-spacing: 0.08em;
+  }
+  .square .shop {
+    font-size: 11px;
+    color: #666;
+    margin-top: 2px;
+  }
+  .square .note {
+    font-family: "Hiragino Sans", sans-serif;
+    font-size: 10px;
+    color: #888;
+    text-align: center;
+    margin-top: 4px;
+  }
+
+  /* 巣鴨: メインコピー10%大きめ */
+  .square.sugamo .main { font-size: 33px; }
+  .square.sugamo .extra {
+    font-family: "Hiragino Sans", sans-serif;
+    font-size: 12px;
+    color: var(--text);
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: 600;
+  }
+
+  /* 縦長バナー 1080x1920 → 270x480 */
+  .vertical {
+    width: 270px;
+    height: 480px;
+    background: var(--beige);
+    padding: 54px 22px 54px;  /* 上下セーフゾーン250px → 画面比率 */
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #e0d5c8;
+    position: relative;
+  }
+  .vertical .safe-top, .vertical .safe-bot {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 54px;
+    background: repeating-linear-gradient(45deg, rgba(0,0,0,0.03) 0 4px, transparent 4px 8px);
+    pointer-events: none;
+  }
+  .vertical .safe-top { top: 0; }
+  .vertical .safe-bot { bottom: 0; }
+  .vertical .area {
+    font-family: "Hiragino Sans", sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--text);
+    text-align: center;
+    margin-bottom: 8px;
+    line-height: 1.3;
+  }
+  .vertical .area small {
+    display: block;
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--sub);
+    margin-top: 2px;
+  }
+  .vertical .bar { height: 2px; background: var(--pink); margin: 10px 20px; }
+  .vertical .main {
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.35;
+    color: var(--text);
+    text-align: center;
+    margin: 8px 0;
+  }
+  .vertical .sub {
+    font-family: "Hiragino Sans", sans-serif;
+    font-size: 11px;
+    color: var(--sub);
+    text-align: center;
+    line-height: 1.5;
+    margin: 6px 0;
+  }
+  .vertical .offer {
+    background: var(--yellow);
+    padding: 10px 8px;
+    border-radius: 4px;
+    text-align: center;
+    margin: 8px 0;
+    font-family: "Hiragino Sans", sans-serif;
+  }
+  .vertical .offer .row {
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1.6;
+    color: #3a2e28;
+  }
+  .vertical .offer .row span {
+    font-size: 16px;
+    color: #b14e4e;
+  }
+  .vertical .extra {
+    font-family: "Hiragino Sans", sans-serif;
+    font-size: 10px;
+    color: #8a6d1b;
+    text-align: center;
+    font-weight: 600;
+    margin: 4px 0;
+  }
+  .vertical .brand {
+    margin-top: auto;
+    text-align: center;
+    font-family: "Hiragino Sans", sans-serif;
+  }
+  .vertical .logo {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--pink);
+    letter-spacing: 0.08em;
+  }
+  .vertical .shop {
+    font-size: 9px;
+    color: #666;
+    margin-top: 2px;
+  }
+
+  /* 巣鴨縦長: メイン大きめ */
+  .vertical.sugamo .main { font-size: 24px; }
+  .vertical.sugamo .extra-top {
+    font-family: "Hiragino Sans", sans-serif;
+    font-size: 11px;
+    color: var(--text);
+    text-align: center;
+    font-weight: 600;
+    margin: 6px 0;
+  }
+
+  .section-header {
+    max-width: 1100px;
+    margin: 50px auto 20px;
+    padding: 0 10px;
+  }
+  .section-header h2 {
+    font-family: "Hiragino Sans", sans-serif;
+    font-size: 22px;
+    margin: 0 0 6px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #D4A5A5;
+  }
+  .section-header p {
+    font-family: "Hiragino Sans", sans-serif;
+    font-size: 12px;
+    color: #666;
+    margin: 0;
+  }
+
+  /* パターンB テキストベース(写真散りばめ) */
+  .text-square {
+    width: 400px;
+    height: 400px;
+    background: var(--beige);
+    padding: 16px 20px;
+    border: 1px solid #e0d5c8;
+    font-family: "Hiragino Sans", sans-serif;
+    position: relative;
+    overflow: hidden;
+  }
+  .text-square .brand-top {
+    font-size: 11px;
+    color: var(--pink);
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-align: center;
+    padding-bottom: 6px;
+    border-bottom: 1px solid var(--line);
+    margin-bottom: 8px;
+  }
+  .text-square .callout {
+    font-size: 17px;
+    font-weight: 800;
+    color: var(--text);
+    text-align: center;
+    line-height: 1.4;
+    margin-bottom: 10px;
+  }
+  .text-square .body {
+    font-size: 10px;
+    line-height: 1.7;
+    color: var(--text);
+    letter-spacing: 0.01em;
+    overflow: hidden;
+  }
+  .text-square .body strong {
+    color: #b14e4e;
+    font-weight: 700;
+  }
+  .text-square .ph {
+    background-image: linear-gradient(135deg, #b8a89c 25%, #a89689 25%, #a89689 50%, #b8a89c 50%, #b8a89c 75%, #a89689 75%);
+    background-size: 10px 10px;
+    border-radius: 3px;
+    border: 3px solid #fff;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.18);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 8px;
+    color: #fff;
+    font-weight: 600;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.6);
+  }
+  .text-square .ph1 {
+    float: right;
+    width: 94px; height: 64px;
+    margin: 0 -4px 6px 10px;
+    transform: rotate(4deg);
+  }
+  .text-square .ph2 {
+    float: left;
+    width: 78px; height: 62px;
+    margin: 6px 10px 6px -4px;
+    transform: rotate(-5deg);
+  }
+  .text-square .ph3 {
+    float: right;
+    width: 82px; height: 56px;
+    margin: 4px -2px 4px 10px;
+    transform: rotate(5deg);
+  }
+  .text-square .badge {
+    clear: both;
+    background: #b14e4e;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 800;
+    text-align: center;
+    padding: 7px 4px;
+    border-radius: 3px;
+    margin-top: 8px;
+    letter-spacing: 0.05em;
+    position: absolute;
+    left: 20px;
+    right: 20px;
+    bottom: 14px;
+  }
+
+  .text-vertical {
+    width: 270px;
+    height: 480px;
+    background: var(--beige);
+    padding: 40px 18px 50px;
+    border: 1px solid #e0d5c8;
+    font-family: "Hiragino Sans", sans-serif;
+    position: relative;
+    overflow: hidden;
+  }
+  .text-vertical .safe-top, .text-vertical .safe-bot {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 40px;
+    background: repeating-linear-gradient(45deg, rgba(0,0,0,0.03) 0 4px, transparent 4px 8px);
+    pointer-events: none;
+    z-index: 5;
+  }
+  .text-vertical .safe-top { top: 0; }
+  .text-vertical .safe-bot { bottom: 0; }
+  .text-vertical .brand-top {
+    font-size: 10px;
+    color: var(--pink);
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-align: center;
+    padding-bottom: 4px;
+    border-bottom: 1px solid var(--line);
+    margin-bottom: 6px;
+  }
+  .text-vertical .callout {
+    font-size: 14px;
+    font-weight: 800;
+    color: var(--text);
+    text-align: center;
+    line-height: 1.4;
+    margin-bottom: 8px;
+  }
+  .text-vertical .body {
+    font-size: 9.5px;
+    line-height: 1.7;
+    color: var(--text);
+    letter-spacing: 0.01em;
+    overflow: hidden;
+  }
+  .text-vertical .body strong {
+    color: #b14e4e;
+    font-weight: 700;
+  }
+  .text-vertical .ph {
+    background-image: linear-gradient(135deg, #b8a89c 25%, #a89689 25%, #a89689 50%, #b8a89c 50%, #b8a89c 75%, #a89689 75%);
+    background-size: 9px 9px;
+    border-radius: 3px;
+    border: 2px solid #fff;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.18);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 7px;
+    color: #fff;
+    font-weight: 600;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.6);
+  }
+  .text-vertical .ph1 {
+    float: right;
+    width: 76px; height: 54px;
+    margin: 0 -4px 4px 6px;
+    transform: rotate(5deg);
+  }
+  .text-vertical .ph2 {
+    float: left;
+    width: 64px; height: 50px;
+    margin: 4px 6px 4px -4px;
+    transform: rotate(-6deg);
+  }
+  .text-vertical .ph3 {
+    float: right;
+    width: 68px; height: 46px;
+    margin: 4px -4px 4px 6px;
+    transform: rotate(4deg);
+  }
+  .text-vertical .badge {
+    clear: both;
+    background: #b14e4e;
+    color: #fff;
+    font-size: 10px;
+    font-weight: 800;
+    text-align: center;
+    padding: 6px 4px;
+    border-radius: 3px;
+    letter-spacing: 0.05em;
+    position: absolute;
+    left: 18px;
+    right: 18px;
+    bottom: 14px;
+  }
+
+  .legend {
+    max-width: 1100px;
+    margin: 0 auto 40px;
+    background: #fff;
+    padding: 20px 28px;
+    border-radius: 12px;
+    font-family: "Hiragino Sans", sans-serif;
+    font-size: 13px;
+    color: #444;
+    line-height: 1.7;
+  }
+  .legend h3 { margin: 0 0 10px; font-size: 14px; }
+  .legend strong { color: #b14e4e; }
+  .swatch {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    vertical-align: middle;
+    margin-right: 4px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+  }
+</style>
+</head>
+<body>
+
+<h1>Pilates mee 店舗別バナーワイヤー</h1>
+<p class="subtitle">2026-04-15 作成 / 11店舗 × 正方形1080×1080 + 縦長1080×1920 / デザイン発注用プレビュー</p>
+
+<div class="legend" style="max-width:1100px;">
+  <h3>参考バナー</h3>
+  <div style="display:flex;gap:20px;align-items:flex-start;flex-wrap:wrap;">
+    <img src="references/ref-joyfit24-asagaya.png" alt="JOY FIT 24 阿佐ヶ谷 参考バナー" style="max-width:240px;border:1px solid #ccc;border-radius:4px;">
+    <div style="flex:1;min-width:280px;font-size:12px;line-height:1.7;color:#555;">
+      <strong>JOY FIT 24 阿佐ヶ谷</strong><br>
+      同一エリア(阿佐ヶ谷)で配信されているジム系バナー。<br>
+      参考ポイント:
+      <ul style="margin:6px 0 0 18px;padding:0;">
+        <li>冒頭「月額2980円〜」の価格インパクト</li>
+        <li>施設写真を大きく使う構図</li>
+        <li>数字(170坪)を大きく見せる</li>
+        <li>駅/エリア名をブランドに併記</li>
+      </ul>
+      今回のPilates mee版は「価格インパクト」を<strong>体験料0円+入会金0円</strong>で、「数字の強さ」を<strong>最大3人の少人数制</strong>で代替している形。
+    </div>
+  </div>
+</div>
+
+<div class="legend">
+  <h3>共通仕様</h3>
+  <div><strong>メインコピー:</strong> 最大3人の少人数制ピラティス</div>
+  <div><strong>サブコピー:</strong> パーソナルより安く、グループより本格的に</div>
+  <div><strong>オファー:</strong> 体験料 0円 + 入会金 0円</div>
+  <div><strong>CTA:</strong> LINEで予約</div>
+  <div style="margin-top:10px;">
+    <span class="swatch" style="background:#F5E8DC"></span>ベージュ #F5E8DC
+    &nbsp;<span class="swatch" style="background:#D4A5A5"></span>くすみピンク #D4A5A5
+    &nbsp;<span class="swatch" style="background:#F4D03F"></span>黄(オファー枠) #F4D03F
+  </div>
+  <div style="margin-top:8px;color:#888;font-size:12px;">※縦長バナーの上下の斜線は Meta セーフゾーン(250px相当)。最終原稿では重要情報を置かない領域。</div>
+</div>
+
+<div class="section-header">
+  <h2>パターンA: ビジュアル中心 / コンパクト訴求</h2>
+  <p>エリアフック + 最大3人の少人数制 + サブコピー + 体験料0円/入会金0円。訴求をコンパクトにまとめたビジュアル中心版。</p>
+</div>
+
+<!-- PM-001 守谷 -->
+<div class="store">
+  <h2>PM-001 守谷店<span class="special">駐車場訴求追加</span></h2>
+  <p class="meta">アクロスモール守谷 徒歩3分 / 茨城県守谷市松ヶ丘7-1-5 / 守谷駅からは徒歩26分のロードサイド型</p>
+  <div class="banners">
+    <div class="banner-wrap">
+      <div class="banner-label">正方形 1080×1080</div>
+      <div class="square">
+        <div class="area">▸ アクロスモール守谷 徒歩3分</div>
+        <div class="divider"></div>
+        <div class="main">最大3人の<br>少人数制ピラティス</div>
+        <div class="sub">パーソナルより安く、<br>グループより本格的に。</div>
+        <div class="offer">
+          <div class="row">体験料 <span>0円</span></div>
+          <div class="row">入会金 <span>0円</span></div>
+        </div>
+        <div class="note">専用駐車場あり</div>
+        <div class="brand">
+          <div class="logo">Pilates mee</div>
+          <div class="shop">守谷店 | LINEで予約</div>
+        </div>
+      </div>
+    </div>
+    <div class="banner-wrap">
+      <div class="banner-label">縦長 1080×1920</div>
+      <div class="vertical">
+        <div class="safe-top"></div>
+        <div class="area">アクロスモール守谷<small>徒歩3分</small></div>
+        <div class="bar"></div>
+        <div class="main">最大3人の<br>少人数制<br>ピラティス</div>
+        <div class="bar"></div>
+        <div class="sub">パーソナルより安く、<br>グループより本格的に。</div>
+        <div class="bar"></div>
+        <div class="offer">
+          <div class="row">体験料 <span>0円</span></div>
+          <div class="row">入会金 <span>0円</span></div>
+        </div>
+        <div class="extra">専用駐車場あり</div>
+        <div class="brand">
+          <div class="logo">Pilates mee</div>
+          <div class="shop">守谷店</div>
+        </div>
+        <div class="safe-bot"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PM-002 柏 -->
+<div class="store">
+  <h2>PM-002 柏店</h2>
+  <p class="meta">柏駅 徒歩4分 / 千葉県柏市中央町2-28 アーク柏中央 402</p>
+  <div class="banners">
+    <div class="banner-wrap">
+      <div class="banner-label">正方形 1080×1080</div>
+      <div class="square">
+        <div class="area">▸ 柏駅 徒歩4分</div>
+        <div class="divider"></div>
+        <div class="main">最大3人の<br>少人数制ピラティス</div>
+        <div class="sub">パーソナルより安く、<br>グループより本格的に。</div>
+        <div class="offer">
+          <div class="row">体験料 <span>0円</span></div>
+          <div class="row">入会金 <span>0円</span></div>
+        </div>
+        <div class="brand">
+          <div class="logo">Pilates mee</div>
+          <div class="shop">柏店 | LINEで予約</div>
+        </div>
+      </div>
+    </div>
+    <div class="banner-wrap">
+      <div class="banner-label">縦長 1080×1920</div>
+      <div class="vertical">
+        <div class="safe-top"></div>
+        <div class="area">柏駅<small>徒歩4分</small></div>
+        <div class="bar"></div>
+        <div class="main">最大3人の<br>少人数制<br>ピラティス</div>
+        <div class="bar"></div>
+        <div class="sub">パーソナルより安く、<br>グループより本格的に。</div>
+        <div class="bar"></div>
+        <div class="offer">
+          <div class="row">体験料 <span>0円</span></div>
+          <div class="row">入会金 <span>0円</span></div>
+        </div>
+        <div class="brand">
+          <div class="logo">Pilates mee</div>
+          <div class="shop">柏店</div>
+        </div>
+        <div class="safe-bot"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PM-003 阿佐ヶ谷 -->
+<div class="store">
+  <h2>PM-003 阿佐ヶ谷店</h2>
+  <p class="meta">阿佐ヶ谷駅 徒歩3分 / 東京都杉並区阿佐谷北1-29-16 杉野ビル 202</p>
+  <div class="banners">
+    <div class="banner-wrap">
+      <div class="banner-label">正方形 1080×1080</div>
+      <div class="square">
+        <div class="area">▸ 阿佐ヶ谷駅 徒歩3分</div>
+        <div class="divider"></div>
+        <div class="main">最大3人の<br>少人数制ピラティス</div>
+        <div class="sub">パーソナルより安く、<br>グループより本格的に。</div>
+        <div class="offer">
+          <div class="row">体験料 <span>0円</span></div>
+          <div class="row">入会金 <span>0円</span></div>
+        </div>
+        <div class="brand">
+          <div class="logo">Pilates mee</div>
+          <div class="shop">阿佐ヶ谷店 | LINEで予約</div>
+        </div>
+      </div>
+    </div>
+    <div class="banner-wrap">
+      <div class="banner-label">縦長 1080×1920</div>
+      <div class="vertical">
+        <div class="safe-top"></div>
+        <div class="area">阿佐ヶ谷駅<small>徒歩3分</small></div>
+        <div class="bar"></div>
+        <div class="main">最大3人の<br>少人数制<br>ピラティス</div>
+        <div class="bar"></div>
+        <div class="sub">パーソナルより安く、<br>グループより本格的に。</div>
+        <div class="bar"></div>
+        <div class="offer">
+          <div class="row">体験料 <span>0円</span></div>
+          <div class="row">入会金 <span>0円</span></div>
+        </div>
+        <div class="brand">
+          <div class="logo">Pilates mee</div>
+          <div class="shop">阿佐ヶ谷店</div>
+        </div>
+        <div class="safe-bot"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PM-004 巣鴨 -->
+<div class="store">
+  <h2>PM-004 巣鴨店<span class="special">40-50代寄せ / メインコピー大きめ</span></h2>
+  <p class="meta">巣鴨駅 徒歩5分 / 東京都豊島区北大塚1-2 MAN巣鴨 303</p>
+  <div class="banners">
+    <div class="banner-wrap">
+      <div class="banner-label">正方形 1080×1080</div>
+      <div class="square sugamo">
+        <div class="area">▸ 巣鴨駅 徒歩5分</div>
+        <div class="divider"></div>
+        <div class="main">最大3人の<br>少人数制ピラティス</div>
+        <div class="extra">長年の肩こり、姿勢で変わるかも。</div>
+        <div class="sub">パーソナルより安く、<br>グループより本格的に。</div>
+        <div class="offer">
+          <div class="row">体験料 <span>0円</span></div>
+          <div class="row">入会金 <span>0円</span></div>
+        </div>
+        <div class="brand">
+          <div class="logo">Pilates mee</div>
+          <div class="shop">巣鴨店 | LINEで予約</div>
+        </div>
+      </div>
+    </div>
+    <div class="banner-wrap">
+      <div class="banner-label">縦長 1080×1920</div>
+      <div class="vertical sugamo">
+        <div class="safe-top"></div>
+        <div class="area">巣鴨駅<small>徒歩5分</small></div>
+        <div class="bar"></div>
+        <div class="extra-top">長年の肩こり、<br>姿勢で変わるかも。</div>
+        <div class="bar"></div>
+        <div class="main">最大3人の<br>少人数制<br>ピラティス</div>
+        <div class="bar"></div>
+        <div class="sub">パーソナルより安く、<br>グループより本格的に。</div>
+        <div class="offer">
+          <div class="row">体験料 <span>0円</span></div>
+          <div class="row">入会金 <span>0円</span></div>
+        </div>
+        <div class="brand">
+          <div class="logo">Pilates mee</div>
+          <div class="shop">巣鴨店</div>
+        </div>
+        <div class="safe-bot"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PM-005 日吉 -->
+<div class="store">
+  <h2>PM-005 日吉店</h2>
+  <p class="meta">日吉駅 徒歩3分 / 神奈川県横浜市港北区日吉2-6-20 ビーハイヴ 303</p>
+  <div class="banners">
+    <div class="banner-wrap">
+      <div class="banner-label">正方形 1080×1080</div>
+      <div class="square">
+        <div class="area">▸ 日吉駅 徒歩3分</div>
+        <div class="divider"></div>
+        <div class="main">最大3人の<br>少人数制ピラティス</div>
+        <div class="sub">パーソナルより安く、<br>グループより本格的に。</div>
+        <div class="offer">
+          <div class="row">体験料 <span>0円</span></div>
+          <div class="row">入会金 <span>0円</span></div>
+        </div>
+        <div class="brand">
+          <div class="logo">Pilates mee</div>
+          <div class="shop">日吉店 | LINEで予約</div>
+        </div>
+      </div>
+    </div>
+    <div class="banner-wrap">
+      <div class="banner-label">縦長 1080×1920</div>
+      <div class="vertical">
+        <div class="safe-top"></div>
+        <div class="area">日吉駅<small>徒歩3分</small></div>
+        <div class="bar"></div>
+        <div class="main">最大3人の<br>少人数制<br>ピラティス</div>
+        <div class="bar"></div>
+        <div class="sub">パーソナルより安く、<br>グループより本格的に。</div>
+        <div class="bar"></div>
+        <div class="offer">
+          <div class="row">体験料 <span>0円</span></div>
+          <div class="row">入会金 <span>0円</span></div>
+        </div>
+        <div class="brand">
+          <div class="logo">Pilates mee</div>
+          <div class="shop">日吉店</div>
+        </div>
+        <div class="safe-bot"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PM-006 相模大野 -->
+<div class="store">
+  <h2>PM-006 相模大野店</h2>
+  <p class="meta">相模大野駅 徒歩1分 / 神奈川県相模原市南区相模大野3-12-9 LSビル 3F</p>
+  <div class="banners">
+    <div class="banner-wrap">
+      <div class="banner-label">正方形 1080×1080</div>
+      <div class="square">
+        <div class="area">▸ 相模大野駅 徒歩1分</div>
+        <div class="divider"></div>
+        <div class="main">最大3人の<br>少人数制ピラティス</div>
+        <div class="sub">パーソナルより安く、<br>グループより本格的に。</div>
+        <div class="offer">
+          <div class="row">体験料 <span>0円</span></div>
+          <div class="row">入会金 <span>0円</span></div>
+        </div>
+        <div class="brand">
+          <div class="logo">Pilates mee</div>
+          <div class="shop">相模大野店 | LINEで予約</div>
+        </div>
+      </div>
+    </div>
+    <div class="banner-wrap">
+      <div class="banner-label">縦長 1080×1920</div>
+      <div class="vertical">
+        <div class="safe-top"></div>
+        <div class="area">相模大野駅<small>徒歩1分</small></div>
+        <div class="bar"></div>
+        <div class="main">最大3人の<br>少人数制<br>ピラティス</div>
+        <div class="bar"></div>
+        <div class="sub">パーソナルより安く、<br>グループより本格的に。</div>
+        <div class="bar"></div>
+        <div class="offer">
+          <div class="row">体験料 <span>0円</span></div>
+          <div class="row">入会金 <span>0円</span></div>
+        </div>
+        <div class="brand">
+          <div class="logo">Pilates mee</div>
+          <div class="shop">相模大野店</div>
+        </div>
+        <div class="safe-bot"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PM-007 神戸元町 -->
+<div class="store">
+  <h2>PM-007 神戸元町店<span class="special">JR元町サブフック併記</span></h2>
+  <p class="meta">みなと元町駅 徒歩2分 / JR元町駅 徒歩6分 / 兵庫県神戸市中央区元町通4-1-13-2 2F</p>
+  <div class="banners">
+    <div class="banner-wrap">
+      <div class="banner-label">正方形 1080×1080</div>
+      <div class="square">
+        <div class="area">▸ みなと元町駅 徒歩2分</div>
+        <div class="divider"></div>
+        <div class="main">最大3人の<br>少人数制ピラティス</div>
+        <div class="sub">パーソナルより安く、<br>グループより本格的に。</div>
+        <div class="offer">
+          <div class="row">体験料 <span>0円</span></div>
+          <div class="row">入会金 <span>0円</span></div>
+        </div>
+        <div class="note">※ JR元町駅からも徒歩6分</div>
+        <div class="brand">
+          <div class="logo">Pilates mee</div>
+          <div class="shop">神戸元町店 | LINEで予約</div>
+        </div>
+      </div>
+    </div>
+    <div class="banner-wrap">
+      <div class="banner-label">縦長 1080×1920</div>
+      <div class="vertical">
+        <div class="safe-top"></div>
+        <div class="area">みなと元町駅<small>徒歩2分</small></div>
+        <div class="bar"></div>
+        <div class="main">最大3人の<br>少人数制<br>ピラティス</div>
+        <div class="bar"></div>
+        <div class="sub">パーソナルより安く、<br>グループより本格的に。</div>
+        <div class="offer">
+          <div class="row">体験料 <span>0円</span></div>
+          <div class="row">入会金 <span>0円</span></div>
+        </div>
+        <div class="extra">※JR元町から徒歩6分</div>
+        <div class="brand">
+          <div class="logo">Pilates mee</div>
+          <div class="shop">神戸元町店</div>
+        </div>
+        <div class="safe-bot"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PM-008 青物横丁 -->
+<div class="store">
+  <h2>PM-008 青物横丁店</h2>
+  <p class="meta">青物横丁駅 徒歩1分 / 東京都品川区南品川3-5-4 TSスクウェアビル 2F 201</p>
+  <div class="banners">
+    <div class="banner-wrap">
+      <div class="banner-label">正方形 1080×1080</div>
+      <div class="square">
+        <div class="area">▸ 青物横丁駅 徒歩1分</div>
+        <div class="divider"></div>
+        <div class="main">最大3人の<br>少人数制ピラティス</div>
+        <div class="sub">パーソナルより安く、<br>グループより本格的に。</div>
+        <div class="offer">
+          <div class="row">体験料 <span>0円</span></div>
+          <div class="row">入会金 <span>0円</span></div>
+        </div>
+        <div class="brand">
+          <div class="logo">Pilates mee</div>
+          <div class="shop">青物横丁店 | LINEで予約</div>
+        </div>
+      </div>
+    </div>
+    <div class="banner-wrap">
+      <div class="banner-label">縦長 1080×1920</div>
+      <div class="vertical">
+        <div class="safe-top"></div>
+        <div class="area">青物横丁駅<small>徒歩1分</small></div>
+        <div class="bar"></div>
+        <div class="main">最大3人の<br>少人数制<br>ピラティス</div>
+        <div class="bar"></div>
+        <div class="sub">パーソナルより安く、<br>グループより本格的に。</div>
+        <div class="bar"></div>
+        <div class="offer">
+          <div class="row">体験料 <span>0円</span></div>
+          <div class="row">入会金 <span>0円</span></div>
+        </div>
+        <div class="brand">
+          <div class="logo">Pilates mee</div>
+          <div class="shop">青物横丁店</div>
+        </div>
+        <div class="safe-bot"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PM-009 笹塚 -->
+<div class="store">
+  <h2>PM-009 笹塚店</h2>
+  <p class="meta">笹塚駅 徒歩1分 / 東京都渋谷区笹塚1-56-6 クレセントプラザ笹塚 50D</p>
+  <div class="banners">
+    <div class="banner-wrap">
+      <div class="banner-label">正方形 1080×1080</div>
+      <div class="square">
+        <div class="area">▸ 笹塚駅 徒歩1分</div>
+        <div class="divider"></div>
+        <div class="main">最大3人の<br>少人数制ピラティス</div>
+        <div class="sub">パーソナルより安く、<br>グループより本格的に。</div>
+        <div class="offer">
+          <div class="row">体験料 <span>0円</span></div>
+          <div class="row">入会金 <span>0円</span></div>
+        </div>
+        <div class="brand">
+          <div class="logo">Pilates mee</div>
+          <div class="shop">笹塚店 | LINEで予約</div>
+        </div>
+      </div>
+    </div>
+    <div class="banner-wrap">
+      <div class="banner-label">縦長 1080×1920</div>
+      <div class="vertical">
+        <div class="safe-top"></div>
+        <div class="area">笹塚駅<small>徒歩1分</small></div>
+        <div class="bar"></div>
+        <div class="main">最大3人の<br>少人数制<br>ピラティス</div>
+        <div class="bar"></div>
+        <div class="sub">パーソナルより安く、<br>グループより本格的に。</div>
+        <div class="bar"></div>
+        <div class="offer">
+          <div class="row">体験料 <span>0円</span></div>
+          <div class="row">入会金 <span>0円</span></div>
+        </div>
+        <div class="brand">
+          <div class="logo">Pilates mee</div>
+          <div class="shop">笹塚店</div>
+        </div>
+        <div class="safe-bot"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PM-010 茨木 -->
+<div class="store">
+  <h2>PM-010 茨木店</h2>
+  <p class="meta">JR茨木駅 徒歩1分 / 大阪府茨木市西駅前町4-35 三和土地ビル 301</p>
+  <div class="banners">
+    <div class="banner-wrap">
+      <div class="banner-label">正方形 1080×1080</div>
+      <div class="square">
+        <div class="area">▸ JR茨木駅 徒歩1分</div>
+        <div class="divider"></div>
+        <div class="main">最大3人の<br>少人数制ピラティス</div>
+        <div class="sub">パーソナルより安く、<br>グループより本格的に。</div>
+        <div class="offer">
+          <div class="row">体験料 <span>0円</span></div>
+          <div class="row">入会金 <span>0円</span></div>
+        </div>
+        <div class="brand">
+          <div class="logo">Pilates mee</div>
+          <div class="shop">茨木店 | LINEで予約</div>
+        </div>
+      </div>
+    </div>
+    <div class="banner-wrap">
+      <div class="banner-label">縦長 1080×1920</div>
+      <div class="vertical">
+        <div class="safe-top"></div>
+        <div class="area">JR茨木駅<small>徒歩1分</small></div>
+        <div class="bar"></div>
+        <div class="main">最大3人の<br>少人数制<br>ピラティス</div>
+        <div class="bar"></div>
+        <div class="sub">パーソナルより安く、<br>グループより本格的に。</div>
+        <div class="bar"></div>
+        <div class="offer">
+          <div class="row">体験料 <span>0円</span></div>
+          <div class="row">入会金 <span>0円</span></div>
+        </div>
+        <div class="brand">
+          <div class="logo">Pilates mee</div>
+          <div class="shop">茨木店</div>
+        </div>
+        <div class="safe-bot"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PM-011 大森 -->
+<div class="store">
+  <h2>PM-011 大森店</h2>
+  <p class="meta">大森駅 徒歩2分 / 東京都品川区南大井6-17-7 正栄プラザビル 306-1</p>
+  <div class="banners">
+    <div class="banner-wrap">
+      <div class="banner-label">正方形 1080×1080</div>
+      <div class="square">
+        <div class="area">▸ 大森駅 徒歩2分</div>
+        <div class="divider"></div>
+        <div class="main">最大3人の<br>少人数制ピラティス</div>
+        <div class="sub">パーソナルより安く、<br>グループより本格的に。</div>
+        <div class="offer">
+          <div class="row">体験料 <span>0円</span></div>
+          <div class="row">入会金 <span>0円</span></div>
+        </div>
+        <div class="brand">
+          <div class="logo">Pilates mee</div>
+          <div class="shop">大森店 | LINEで予約</div>
+        </div>
+      </div>
+    </div>
+    <div class="banner-wrap">
+      <div class="banner-label">縦長 1080×1920</div>
+      <div class="vertical">
+        <div class="safe-top"></div>
+        <div class="area">大森駅<small>徒歩2分</small></div>
+        <div class="bar"></div>
+        <div class="main">最大3人の<br>少人数制<br>ピラティス</div>
+        <div class="bar"></div>
+        <div class="sub">パーソナルより安く、<br>グループより本格的に。</div>
+        <div class="bar"></div>
+        <div class="offer">
+          <div class="row">体験料 <span>0円</span></div>
+          <div class="row">入会金 <span>0円</span></div>
+        </div>
+        <div class="brand">
+          <div class="logo">Pilates mee</div>
+          <div class="shop">大森店</div>
+        </div>
+        <div class="safe-bot"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="section-header">
+  <h2>パターンB: テキストベース / 手紙風(写真散りばめ)</h2>
+  <p>駅呼びかけ + ストーリー本文に施設写真を散りばめた型。少人数制・繰り越しチケット・体験+入会金0円・先着20名限定を同時訴求。JOY FIT 24 LITE 丸亀の構成を参考。</p>
+</div>
+
+<div class="legend" style="max-width:1100px;">
+  <h3>参考バナー②</h3>
+  <div style="display:flex;gap:20px;align-items:flex-start;flex-wrap:wrap;">
+    <img src="references/ref-joyfit24lite-marugame.png" alt="JOY FIT 24 LITE 丸亀 参考バナー" style="max-width:240px;border:1px solid #ccc;border-radius:4px;">
+    <div style="flex:1;min-width:280px;font-size:12px;line-height:1.7;color:#555;">
+      <strong>JOY FIT 24 LITE 丸亀</strong><br>
+      参考ポイント:
+      <ul style="margin:6px 0 0 18px;padding:0;">
+        <li>ブランド名を冒頭に小さく配置</li>
+        <li>「◯◯駅周辺にお住まいの方へ」の呼びかけが大見出し</li>
+        <li>施設写真を散りばめて配置</li>
+        <li>長めのストーリー本文で特徴を複数訴求</li>
+        <li>「先着20名様限定」の赤バッジで希少性</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- PM-012 守谷 パターンB -->
+<div class="store">
+  <h2>PM-012 守谷店 (パターンB)<span class="special">駐車場訴求追加</span></h2>
+  <p class="meta">アクロスモール守谷 徒歩3分 / 茨城県守谷市松ヶ丘7-1-5</p>
+  <div class="banners">
+    <div class="banner-wrap">
+      <div class="banner-label">正方形 1080×1080</div>
+      <div class="text-square">
+        <div class="brand-top">Pilates mee 守谷店</div>
+        <div class="callout">アクロスモール守谷周辺に<br>お住まいの方へ</div>
+        <div class="body">
+          <div class="ph ph1">スタジオ</div>
+          Pilates mee 守谷店で、<br>ピラティスをして姿勢を整えませんか?<br><br>
+          <div class="ph ph2">マシン</div>
+          <strong>最大3名の少人数制</strong>なので、<br>グループよりも本格的に、<br>パーソナルよりも続けやすいお値段で始められます。<br><br>
+          <div class="ph ph3">レッスン</div>
+          繰り越しができるチケットなので、<br>忙しい月でも安心!<br><br>
+          さらに今なら<br><strong>体験+入会金が0円</strong><br>のキャンペーン実施中<br><span style="color:#8a6d1b;font-weight:700;">※専用駐車場あり</span>
+        </div>
+        <div class="badge">先着 20名限定</div>
+      </div>
+    </div>
+    <div class="banner-wrap">
+      <div class="banner-label">縦長 1080×1920</div>
+      <div class="text-vertical">
+        <div class="safe-top"></div>
+        <div class="brand-top">Pilates mee 守谷店</div>
+        <div class="callout">アクロスモール守谷周辺に<br>お住まいの方へ</div>
+        <div class="body">
+          <div class="ph ph1">スタジオ</div>
+          Pilates mee 守谷店で<br>姿勢を整えませんか?<br><br>
+          <div class="ph ph2">マシン</div>
+          <strong>最大3名の少人数制</strong>。<br>グループより本格的、<br>パーソナルより<br>続けやすいお値段で。<br><br>
+          <div class="ph ph3">レッスン</div>
+          繰り越しチケットで<br>忙しい月も安心!<br><br>
+          今なら<br><strong>体験+入会金 0円</strong><br>キャンペーン実施中<br><span style="color:#8a6d1b;font-weight:700;">※駐車場あり</span>
+        </div>
+        <div class="badge">先着 20名限定</div>
+        <div class="safe-bot"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PM-013 柏 パターンB -->
+<div class="store">
+  <h2>PM-013 柏店 (パターンB)</h2>
+  <p class="meta">柏駅 徒歩4分 / 千葉県柏市中央町2-28 アーク柏中央 402</p>
+  <div class="banners">
+    <div class="banner-wrap">
+      <div class="banner-label">正方形 1080×1080</div>
+      <div class="text-square">
+        <div class="brand-top">Pilates mee 柏店</div>
+        <div class="callout">柏駅周辺に<br>お住まいの方へ</div>
+        <div class="body">
+          <div class="ph ph1">スタジオ</div>
+          Pilates mee 柏店で、<br>ピラティスをして姿勢を整えませんか?<br><br>
+          <div class="ph ph2">マシン</div>
+          <strong>最大3名の少人数制</strong>なので、<br>グループよりも本格的に、<br>パーソナルよりも続けやすいお値段で始められます。<br><br>
+          <div class="ph ph3">レッスン</div>
+          繰り越しができるチケットなので、<br>忙しい月でも安心!<br><br>
+          さらに今なら<br><strong>体験+入会金が0円</strong><br>のキャンペーン実施中
+        </div>
+        <div class="badge">先着 20名限定</div>
+      </div>
+    </div>
+    <div class="banner-wrap">
+      <div class="banner-label">縦長 1080×1920</div>
+      <div class="text-vertical">
+        <div class="safe-top"></div>
+        <div class="brand-top">Pilates mee 柏店</div>
+        <div class="callout">柏駅周辺に<br>お住まいの方へ</div>
+        <div class="body">
+          <div class="ph ph1">スタジオ</div>
+          Pilates mee 柏店で<br>姿勢を整えませんか?<br><br>
+          <div class="ph ph2">マシン</div>
+          <strong>最大3名の少人数制</strong>。<br>グループより本格的、<br>パーソナルより<br>続けやすいお値段で。<br><br>
+          <div class="ph ph3">レッスン</div>
+          繰り越しチケットで<br>忙しい月も安心!<br><br>
+          今なら<br><strong>体験+入会金 0円</strong><br>キャンペーン実施中
+        </div>
+        <div class="badge">先着 20名限定</div>
+        <div class="safe-bot"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PM-014 阿佐ヶ谷 パターンB -->
+<div class="store">
+  <h2>PM-014 阿佐ヶ谷店 (パターンB)</h2>
+  <p class="meta">阿佐ヶ谷駅 徒歩3分 / 東京都杉並区阿佐谷北1-29-16 杉野ビル 202</p>
+  <div class="banners">
+    <div class="banner-wrap">
+      <div class="banner-label">正方形 1080×1080</div>
+      <div class="text-square">
+        <div class="brand-top">Pilates mee 阿佐ヶ谷店</div>
+        <div class="callout">阿佐ヶ谷駅周辺に<br>お住まいの方へ</div>
+        <div class="body">
+          <div class="ph ph1">スタジオ</div>
+          Pilates mee 阿佐ヶ谷店で、<br>ピラティスをして姿勢を整えませんか?<br><br>
+          <div class="ph ph2">マシン</div>
+          <strong>最大3名の少人数制</strong>なので、<br>グループよりも本格的に、<br>パーソナルよりも続けやすいお値段で始められます。<br><br>
+          <div class="ph ph3">レッスン</div>
+          繰り越しができるチケットなので、<br>忙しい月でも安心!<br><br>
+          さらに今なら<br><strong>体験+入会金が0円</strong><br>のキャンペーン実施中
+        </div>
+        <div class="badge">先着 20名限定</div>
+      </div>
+    </div>
+    <div class="banner-wrap">
+      <div class="banner-label">縦長 1080×1920</div>
+      <div class="text-vertical">
+        <div class="safe-top"></div>
+        <div class="brand-top">Pilates mee 阿佐ヶ谷店</div>
+        <div class="callout">阿佐ヶ谷駅周辺に<br>お住まいの方へ</div>
+        <div class="body">
+          <div class="ph ph1">スタジオ</div>
+          Pilates mee 阿佐ヶ谷店で<br>姿勢を整えませんか?<br><br>
+          <div class="ph ph2">マシン</div>
+          <strong>最大3名の少人数制</strong>。<br>グループより本格的、<br>パーソナルより<br>続けやすいお値段で。<br><br>
+          <div class="ph ph3">レッスン</div>
+          繰り越しチケットで<br>忙しい月も安心!<br><br>
+          今なら<br><strong>体験+入会金 0円</strong><br>キャンペーン実施中
+        </div>
+        <div class="badge">先着 20名限定</div>
+        <div class="safe-bot"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PM-015 巣鴨 パターンB -->
+<div class="store">
+  <h2>PM-015 巣鴨店 (パターンB)<span class="special">40-50代寄せ</span></h2>
+  <p class="meta">巣鴨駅 徒歩5分 / 東京都豊島区北大塚1-2 MAN巣鴨 303</p>
+  <div class="banners">
+    <div class="banner-wrap">
+      <div class="banner-label">正方形 1080×1080</div>
+      <div class="text-square">
+        <div class="brand-top">Pilates mee 巣鴨店</div>
+        <div class="callout">巣鴨駅周辺に<br>お住まいの方へ</div>
+        <div class="body">
+          <div class="ph ph1">スタジオ</div>
+          Pilates mee 巣鴨店で、<br>長年の肩こりや猫背、姿勢から見直しませんか?<br><br>
+          <div class="ph ph2">マシン</div>
+          <strong>最大3名の少人数制</strong>なので、<br>グループよりも本格的に、<br>パーソナルよりも続けやすいお値段で始められます。<br><br>
+          <div class="ph ph3">レッスン</div>
+          繰り越しができるチケットなので、<br>忙しい月でも安心!<br><br>
+          さらに今なら<br><strong>体験+入会金が0円</strong><br>のキャンペーン実施中
+        </div>
+        <div class="badge">先着 20名限定</div>
+      </div>
+    </div>
+    <div class="banner-wrap">
+      <div class="banner-label">縦長 1080×1920</div>
+      <div class="text-vertical">
+        <div class="safe-top"></div>
+        <div class="brand-top">Pilates mee 巣鴨店</div>
+        <div class="callout">巣鴨駅周辺に<br>お住まいの方へ</div>
+        <div class="body">
+          <div class="ph ph1">スタジオ</div>
+          Pilates mee 巣鴨店で、<br>長年の肩こりや<br>姿勢から見直しませんか?<br><br>
+          <div class="ph ph2">マシン</div>
+          <strong>最大3名の少人数制</strong>。<br>グループより本格的、<br>パーソナルより<br>続けやすいお値段で。<br><br>
+          <div class="ph ph3">レッスン</div>
+          繰り越しチケットで<br>忙しい月も安心!<br><br>
+          今なら<br><strong>体験+入会金 0円</strong><br>キャンペーン実施中
+        </div>
+        <div class="badge">先着 20名限定</div>
+        <div class="safe-bot"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PM-016 日吉 パターンB -->
+<div class="store">
+  <h2>PM-016 日吉店 (パターンB)</h2>
+  <p class="meta">日吉駅 徒歩3分 / 神奈川県横浜市港北区日吉2-6-20 ビーハイヴ 303</p>
+  <div class="banners">
+    <div class="banner-wrap">
+      <div class="banner-label">正方形 1080×1080</div>
+      <div class="text-square">
+        <div class="brand-top">Pilates mee 日吉店</div>
+        <div class="callout">日吉駅周辺に<br>お住まいの方へ</div>
+        <div class="body">
+          <div class="ph ph1">スタジオ</div>
+          Pilates mee 日吉店で、<br>ピラティスをして姿勢を整えませんか?<br><br>
+          <div class="ph ph2">マシン</div>
+          <strong>最大3名の少人数制</strong>なので、<br>グループよりも本格的に、<br>パーソナルよりも続けやすいお値段で始められます。<br><br>
+          <div class="ph ph3">レッスン</div>
+          繰り越しができるチケットなので、<br>忙しい月でも安心!<br><br>
+          さらに今なら<br><strong>体験+入会金が0円</strong><br>のキャンペーン実施中
+        </div>
+        <div class="badge">先着 20名限定</div>
+      </div>
+    </div>
+    <div class="banner-wrap">
+      <div class="banner-label">縦長 1080×1920</div>
+      <div class="text-vertical">
+        <div class="safe-top"></div>
+        <div class="brand-top">Pilates mee 日吉店</div>
+        <div class="callout">日吉駅周辺に<br>お住まいの方へ</div>
+        <div class="body">
+          <div class="ph ph1">スタジオ</div>
+          Pilates mee 日吉店で<br>姿勢を整えませんか?<br><br>
+          <div class="ph ph2">マシン</div>
+          <strong>最大3名の少人数制</strong>。<br>グループより本格的、<br>パーソナルより<br>続けやすいお値段で。<br><br>
+          <div class="ph ph3">レッスン</div>
+          繰り越しチケットで<br>忙しい月も安心!<br><br>
+          今なら<br><strong>体験+入会金 0円</strong><br>キャンペーン実施中
+        </div>
+        <div class="badge">先着 20名限定</div>
+        <div class="safe-bot"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PM-017 相模大野 パターンB -->
+<div class="store">
+  <h2>PM-017 相模大野店 (パターンB)</h2>
+  <p class="meta">相模大野駅 徒歩1分 / 神奈川県相模原市南区相模大野3-12-9 LSビル 3F</p>
+  <div class="banners">
+    <div class="banner-wrap">
+      <div class="banner-label">正方形 1080×1080</div>
+      <div class="text-square">
+        <div class="brand-top">Pilates mee 相模大野店</div>
+        <div class="callout">相模大野駅周辺に<br>お住まいの方へ</div>
+        <div class="body">
+          <div class="ph ph1">スタジオ</div>
+          Pilates mee 相模大野店で、<br>ピラティスをして姿勢を整えませんか?<br><br>
+          <div class="ph ph2">マシン</div>
+          <strong>最大3名の少人数制</strong>なので、<br>グループよりも本格的に、<br>パーソナルよりも続けやすいお値段で始められます。<br><br>
+          <div class="ph ph3">レッスン</div>
+          繰り越しができるチケットなので、<br>忙しい月でも安心!<br><br>
+          さらに今なら<br><strong>体験+入会金が0円</strong><br>のキャンペーン実施中
+        </div>
+        <div class="badge">先着 20名限定</div>
+      </div>
+    </div>
+    <div class="banner-wrap">
+      <div class="banner-label">縦長 1080×1920</div>
+      <div class="text-vertical">
+        <div class="safe-top"></div>
+        <div class="brand-top">Pilates mee 相模大野店</div>
+        <div class="callout">相模大野駅周辺に<br>お住まいの方へ</div>
+        <div class="body">
+          <div class="ph ph1">スタジオ</div>
+          Pilates mee 相模大野店で<br>姿勢を整えませんか?<br><br>
+          <div class="ph ph2">マシン</div>
+          <strong>最大3名の少人数制</strong>。<br>グループより本格的、<br>パーソナルより<br>続けやすいお値段で。<br><br>
+          <div class="ph ph3">レッスン</div>
+          繰り越しチケットで<br>忙しい月も安心!<br><br>
+          今なら<br><strong>体験+入会金 0円</strong><br>キャンペーン実施中
+        </div>
+        <div class="badge">先着 20名限定</div>
+        <div class="safe-bot"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PM-018 神戸元町 パターンB -->
+<div class="store">
+  <h2>PM-018 神戸元町店 (パターンB)</h2>
+  <p class="meta">みなと元町駅 徒歩2分 / JR元町駅 徒歩6分 / 兵庫県神戸市中央区元町通4-1-13-2 2F</p>
+  <div class="banners">
+    <div class="banner-wrap">
+      <div class="banner-label">正方形 1080×1080</div>
+      <div class="text-square">
+        <div class="brand-top">Pilates mee 神戸元町店</div>
+        <div class="callout">みなと元町駅周辺に<br>お住まいの方へ</div>
+        <div class="body">
+          <div class="ph ph1">スタジオ</div>
+          Pilates mee 神戸元町店で、<br>ピラティスをして姿勢を整えませんか?<br><br>
+          <div class="ph ph2">マシン</div>
+          <strong>最大3名の少人数制</strong>なので、<br>グループよりも本格的に、<br>パーソナルよりも続けやすいお値段で始められます。<br><br>
+          <div class="ph ph3">レッスン</div>
+          繰り越しができるチケットなので、<br>忙しい月でも安心!<br><br>
+          さらに今なら<br><strong>体験+入会金が0円</strong><br>のキャンペーン実施中<br><span style="color:#666;font-size:9px;">※JR元町駅からも徒歩6分</span>
+        </div>
+        <div class="badge">先着 20名限定</div>
+      </div>
+    </div>
+    <div class="banner-wrap">
+      <div class="banner-label">縦長 1080×1920</div>
+      <div class="text-vertical">
+        <div class="safe-top"></div>
+        <div class="brand-top">Pilates mee 神戸元町店</div>
+        <div class="callout">みなと元町駅周辺に<br>お住まいの方へ</div>
+        <div class="body">
+          <div class="ph ph1">スタジオ</div>
+          Pilates mee 神戸元町店で<br>姿勢を整えませんか?<br><br>
+          <div class="ph ph2">マシン</div>
+          <strong>最大3名の少人数制</strong>。<br>グループより本格的、<br>パーソナルより<br>続けやすいお値段で。<br><br>
+          <div class="ph ph3">レッスン</div>
+          繰り越しチケットで<br>忙しい月も安心!<br><br>
+          今なら<br><strong>体験+入会金 0円</strong><br>キャンペーン実施中<br><span style="color:#666;font-size:8px;">※JR元町駅徒歩6分</span>
+        </div>
+        <div class="badge">先着 20名限定</div>
+        <div class="safe-bot"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PM-019 青物横丁 パターンB -->
+<div class="store">
+  <h2>PM-019 青物横丁店 (パターンB)</h2>
+  <p class="meta">青物横丁駅 徒歩1分 / 東京都品川区南品川3-5-4 TSスクウェアビル 2F 201</p>
+  <div class="banners">
+    <div class="banner-wrap">
+      <div class="banner-label">正方形 1080×1080</div>
+      <div class="text-square">
+        <div class="brand-top">Pilates mee 青物横丁店</div>
+        <div class="callout">青物横丁駅周辺に<br>お住まいの方へ</div>
+        <div class="body">
+          <div class="ph ph1">スタジオ</div>
+          Pilates mee 青物横丁店で、<br>ピラティスをして姿勢を整えませんか?<br><br>
+          <div class="ph ph2">マシン</div>
+          <strong>最大3名の少人数制</strong>なので、<br>グループよりも本格的に、<br>パーソナルよりも続けやすいお値段で始められます。<br><br>
+          <div class="ph ph3">レッスン</div>
+          繰り越しができるチケットなので、<br>忙しい月でも安心!<br><br>
+          さらに今なら<br><strong>体験+入会金が0円</strong><br>のキャンペーン実施中
+        </div>
+        <div class="badge">先着 20名限定</div>
+      </div>
+    </div>
+    <div class="banner-wrap">
+      <div class="banner-label">縦長 1080×1920</div>
+      <div class="text-vertical">
+        <div class="safe-top"></div>
+        <div class="brand-top">Pilates mee 青物横丁店</div>
+        <div class="callout">青物横丁駅周辺に<br>お住まいの方へ</div>
+        <div class="body">
+          <div class="ph ph1">スタジオ</div>
+          Pilates mee 青物横丁店で<br>姿勢を整えませんか?<br><br>
+          <div class="ph ph2">マシン</div>
+          <strong>最大3名の少人数制</strong>。<br>グループより本格的、<br>パーソナルより<br>続けやすいお値段で。<br><br>
+          <div class="ph ph3">レッスン</div>
+          繰り越しチケットで<br>忙しい月も安心!<br><br>
+          今なら<br><strong>体験+入会金 0円</strong><br>キャンペーン実施中
+        </div>
+        <div class="badge">先着 20名限定</div>
+        <div class="safe-bot"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PM-020 笹塚 パターンB -->
+<div class="store">
+  <h2>PM-020 笹塚店 (パターンB)</h2>
+  <p class="meta">笹塚駅 徒歩1分 / 東京都渋谷区笹塚1-56-6 クレセントプラザ笹塚 50D</p>
+  <div class="banners">
+    <div class="banner-wrap">
+      <div class="banner-label">正方形 1080×1080</div>
+      <div class="text-square">
+        <div class="brand-top">Pilates mee 笹塚店</div>
+        <div class="callout">笹塚駅周辺に<br>お住まいの方へ</div>
+        <div class="body">
+          <div class="ph ph1">スタジオ</div>
+          Pilates mee 笹塚店で、<br>ピラティスをして姿勢を整えませんか?<br><br>
+          <div class="ph ph2">マシン</div>
+          <strong>最大3名の少人数制</strong>なので、<br>グループよりも本格的に、<br>パーソナルよりも続けやすいお値段で始められます。<br><br>
+          <div class="ph ph3">レッスン</div>
+          繰り越しができるチケットなので、<br>忙しい月でも安心!<br><br>
+          さらに今なら<br><strong>体験+入会金が0円</strong><br>のキャンペーン実施中
+        </div>
+        <div class="badge">先着 20名限定</div>
+      </div>
+    </div>
+    <div class="banner-wrap">
+      <div class="banner-label">縦長 1080×1920</div>
+      <div class="text-vertical">
+        <div class="safe-top"></div>
+        <div class="brand-top">Pilates mee 笹塚店</div>
+        <div class="callout">笹塚駅周辺に<br>お住まいの方へ</div>
+        <div class="body">
+          <div class="ph ph1">スタジオ</div>
+          Pilates mee 笹塚店で<br>姿勢を整えませんか?<br><br>
+          <div class="ph ph2">マシン</div>
+          <strong>最大3名の少人数制</strong>。<br>グループより本格的、<br>パーソナルより<br>続けやすいお値段で。<br><br>
+          <div class="ph ph3">レッスン</div>
+          繰り越しチケットで<br>忙しい月も安心!<br><br>
+          今なら<br><strong>体験+入会金 0円</strong><br>キャンペーン実施中
+        </div>
+        <div class="badge">先着 20名限定</div>
+        <div class="safe-bot"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PM-021 茨木 パターンB -->
+<div class="store">
+  <h2>PM-021 茨木店 (パターンB)</h2>
+  <p class="meta">JR茨木駅 徒歩1分 / 大阪府茨木市西駅前町4-35 三和土地ビル 301</p>
+  <div class="banners">
+    <div class="banner-wrap">
+      <div class="banner-label">正方形 1080×1080</div>
+      <div class="text-square">
+        <div class="brand-top">Pilates mee 茨木店</div>
+        <div class="callout">JR茨木駅周辺に<br>お住まいの方へ</div>
+        <div class="body">
+          <div class="ph ph1">スタジオ</div>
+          Pilates mee 茨木店で、<br>ピラティスをして姿勢を整えませんか?<br><br>
+          <div class="ph ph2">マシン</div>
+          <strong>最大3名の少人数制</strong>なので、<br>グループよりも本格的に、<br>パーソナルよりも続けやすいお値段で始められます。<br><br>
+          <div class="ph ph3">レッスン</div>
+          繰り越しができるチケットなので、<br>忙しい月でも安心!<br><br>
+          さらに今なら<br><strong>体験+入会金が0円</strong><br>のキャンペーン実施中
+        </div>
+        <div class="badge">先着 20名限定</div>
+      </div>
+    </div>
+    <div class="banner-wrap">
+      <div class="banner-label">縦長 1080×1920</div>
+      <div class="text-vertical">
+        <div class="safe-top"></div>
+        <div class="brand-top">Pilates mee 茨木店</div>
+        <div class="callout">JR茨木駅周辺に<br>お住まいの方へ</div>
+        <div class="body">
+          <div class="ph ph1">スタジオ</div>
+          Pilates mee 茨木店で<br>姿勢を整えませんか?<br><br>
+          <div class="ph ph2">マシン</div>
+          <strong>最大3名の少人数制</strong>。<br>グループより本格的、<br>パーソナルより<br>続けやすいお値段で。<br><br>
+          <div class="ph ph3">レッスン</div>
+          繰り越しチケットで<br>忙しい月も安心!<br><br>
+          今なら<br><strong>体験+入会金 0円</strong><br>キャンペーン実施中
+        </div>
+        <div class="badge">先着 20名限定</div>
+        <div class="safe-bot"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PM-022 大森 パターンB -->
+<div class="store">
+  <h2>PM-022 大森店 (パターンB)</h2>
+  <p class="meta">大森駅 徒歩2分 / 東京都品川区南大井6-17-7 正栄プラザビル 306-1</p>
+  <div class="banners">
+    <div class="banner-wrap">
+      <div class="banner-label">正方形 1080×1080</div>
+      <div class="text-square">
+        <div class="brand-top">Pilates mee 大森店</div>
+        <div class="callout">大森駅周辺に<br>お住まいの方へ</div>
+        <div class="body">
+          <div class="ph ph1">スタジオ</div>
+          Pilates mee 大森店で、<br>ピラティスをして姿勢を整えませんか?<br><br>
+          <div class="ph ph2">マシン</div>
+          <strong>最大3名の少人数制</strong>なので、<br>グループよりも本格的に、<br>パーソナルよりも続けやすいお値段で始められます。<br><br>
+          <div class="ph ph3">レッスン</div>
+          繰り越しができるチケットなので、<br>忙しい月でも安心!<br><br>
+          さらに今なら<br><strong>体験+入会金が0円</strong><br>のキャンペーン実施中
+        </div>
+        <div class="badge">先着 20名限定</div>
+      </div>
+    </div>
+    <div class="banner-wrap">
+      <div class="banner-label">縦長 1080×1920</div>
+      <div class="text-vertical">
+        <div class="safe-top"></div>
+        <div class="brand-top">Pilates mee 大森店</div>
+        <div class="callout">大森駅周辺に<br>お住まいの方へ</div>
+        <div class="body">
+          <div class="ph ph1">スタジオ</div>
+          Pilates mee 大森店で<br>姿勢を整えませんか?<br><br>
+          <div class="ph ph2">マシン</div>
+          <strong>最大3名の少人数制</strong>。<br>グループより本格的、<br>パーソナルより<br>続けやすいお値段で。<br><br>
+          <div class="ph ph3">レッスン</div>
+          繰り越しチケットで<br>忙しい月も安心!<br><br>
+          今なら<br><strong>体験+入会金 0円</strong><br>キャンペーン実施中
+        </div>
+        <div class="badge">先着 20名限定</div>
+        <div class="safe-bot"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
